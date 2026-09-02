@@ -1,0 +1,24 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Stage 1') {
+            steps {
+                bat 'echo Preparing Environment'
+            }
+        }
+
+        stage('Stage 2') {
+            steps {
+                bat 'java -version'
+            }
+        }
+
+        stage('Stage 3') {
+            steps {
+                bat 'echo Build Successful'
+            }
+        }
+    }
+}
