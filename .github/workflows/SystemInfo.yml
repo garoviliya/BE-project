@@ -1,0 +1,25 @@
+name: System Info
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+
+  info:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Show OS
+
+        run: uname -a
+
+      - name: Show Java version
+
+        run: java -version
+
+      - name: Show current directory
+
+        run: pwd
