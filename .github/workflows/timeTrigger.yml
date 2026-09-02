@@ -1,0 +1,28 @@
+name: Hello Workflow
+
+on:
+  schedule:
+
+    - cron: '0 9 * * *'
+
+  push:
+
+    branches:
+
+      - master
+
+jobs:
+
+  hello:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Print message
+
+        run: echo "Hello There"
+
+      - name: Print date
+
+        run: date
